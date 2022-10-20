@@ -1,0 +1,57 @@
+
+.message {
+    width: 610px;
+    height: 80px;
+    position: relative;
+    left: 650px;
+    top: 24px;
+}
+
+.imageAndText {
+    width: 550px;
+    height: 80px;
+    background: url("../background.png");
+    position: relative;
+}
+
+.imageAndText img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    right: -60px;
+}
+
+.text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    width: 100%;
+    color: white;
+}
+
+.text:after {
+
+}
+
+.name {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+}
+
+.messageText {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.time {
+    position: absolute;
+    right: 5px;
+}

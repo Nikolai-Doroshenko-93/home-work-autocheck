@@ -1,0 +1,57 @@
+.friendMessage {
+    width: 414px;
+    height: 80px;
+    position: relative;
+    left: 0px;
+    top: 24px;
+}
+
+.friendImageAndText {
+    width: 450px;
+    height: 80px;
+    background: url("../friendBackground.png");
+    position: relative;
+    left: 40px;
+}
+
+.friendImageAndText img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    left: -40px;
+}
+
+.friendText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    width: 100%;
+    color: black;
+}
+
+.friendText:after {
+
+}
+
+.friendName {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    color: black;
+}
+
+.friendMessageText {
+    position: absolute;
+    top: 50px;
+    left: 40px
+}
+
+.friendTime {
+    position: absolute;
+    left: 20px;
+}
