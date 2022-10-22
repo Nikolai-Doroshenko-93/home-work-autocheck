@@ -2,34 +2,78 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 462px;
+    position: relative;
 }
 
 .error {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 42px;
 }
 
-.input {
+input {
+    width: 372px;
+    height: 36px !important;
+    outline: none;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+
 }
 
 .input:focus {
+    border: #0059b3;
 }
 
 .errorInput {
-    border: 5px solid red;
+    border: 1px solid red;
 }
 
 .button {
+    width: 78px;
+    height: 36px;
+    background: #0066CC;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    background: #0066CC;
+    opacity: 0.9;
+    border: none;
 }
 
-.button:focus {
+.button:hover {
+    opacity: 1;
 }
 
 .button:active {
+    transform: scale(0.9);
 }
 
 .button:disabled {
+    opacity: 0.5;
 }
 
 .text {
+    margin-top: 31px;
+    margin-bottom: 9px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .greeting {

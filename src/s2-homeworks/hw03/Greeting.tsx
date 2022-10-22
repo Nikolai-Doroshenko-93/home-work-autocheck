@@ -1,4 +1,4 @@
-import React, {ChangeEvent, KeyboardEvent} from 'react'
+import React from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
@@ -47,7 +47,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                         onBlur={onBlur}
                     />
                     <div id={'hw3-error'} className={s.error}>
-                        {error}
+                        {error ? 'Ошибка! Введите имя!' : ''}
                     </div>
                 </div>
 
@@ -57,7 +57,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                     className={s.button}
                     disabled={!name.trim()}
                 >
-                    add
+                    Add
                 </button>
             </div>
 
