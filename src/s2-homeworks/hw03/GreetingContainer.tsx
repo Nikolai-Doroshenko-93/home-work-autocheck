@@ -11,7 +11,7 @@ type GreetingContainerPropsType = {
 export const pureAddUser = (name: any, setError: any, setName: any, addUserCallback: any) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
     if (name === '' || name[0] === ' ') {
-        alert('error')
+        setError('Ошибка! Введите имя!')
     } else {
         addUserCallback(name)
         setName('')
@@ -20,13 +20,13 @@ export const pureAddUser = (name: any, setError: any, setName: any, addUserCallb
 
 export const pureOnBlur = (name: any, setError: any) => {
     // если имя пустое - показать ошибку
-    if (name === '') {
-        setError('error')
+    if (name.trim() === '') {
+        setError('Ошибка! Введите имя!')
     }
 }
 
 export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: any) => { // если нажата кнопка Enter - добавить
-    if(e.keyCode === 13) {
+    if(e.key === 'Enter') {
         addUser()
     }
 }
@@ -46,7 +46,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
         if(e.currentTarget.value === '' ||  e.currentTarget.value.trim() === '' || e.currentTarget.value[0] === ' ') {
             setName(e.currentTarget.value)
-            setError('error')
+            setError('Ошибка! Введите имя!')
         } else {
             setName(e.currentTarget.value)
             setError('')
@@ -57,9 +57,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 
     }
     const addUser = () => {
-        pureAddUser(name, setError, setName, addUserCallback)
-        setName('')
-        setTotalUsers(totalUsers+1)
+        if (name.trim()==='') {
+            setError('Ошибка! Введите имя!')
+        } else {
+            pureAddUser(name, setError, setName, addUserCallback)
+            setName('')}
     }
 
     const onBlur = () => {
@@ -70,12 +72,13 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         pureOnEnter(e, addUser)
     }
 
-    const [totalUsers, setTotalUsers] = useState(0) // need to fix
+    // const [totalUsers, setTotalUsers] = useState(0) // need to fix
+    const totalUsers = users.length
     let lastUserName
     if (users.length === 0) {
         lastUserName = ''
     } else {
-        lastUserName = users[users.length-1].name.trim()
+        lastUserName = users[users.length-1].name
     }
     // need to fix
 
