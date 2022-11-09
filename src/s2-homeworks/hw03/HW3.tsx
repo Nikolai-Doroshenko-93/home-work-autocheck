@@ -22,8 +22,9 @@ export type UserType = {
     _id: string // need to fix any
     name: string // need to fix any
 }
+export type SetUsersType = any
 
-export const pureAddUserCallback = (name: any, setUsers: any, users: any) => { // need to fix any
+export const pureAddUserCallback = (name: string, setUsers: SetUsersType, users:Array<UserType>) => { // need to fix any
     const user = {
         _id: v1(),
         name: name
@@ -33,7 +34,7 @@ export const pureAddUserCallback = (name: any, setUsers: any, users: any) => { /
 }
 
 const HW3 = () => {
-    const [users, setUsers] = useState<any>([]) // need to fix any
+    const [users, setUsers] = useState<Array<UserType>>([]) // need to fix any
 
     const addUserCallback = (name: string) => { // need to fix any
         pureAddUserCallback(name, setUsers, users)
