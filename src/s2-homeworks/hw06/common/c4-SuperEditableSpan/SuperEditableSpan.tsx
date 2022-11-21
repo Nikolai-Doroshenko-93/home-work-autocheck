@@ -49,6 +49,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         // выключить editMode при нажатии за пределами инпута // делают студенты
 
         onBlur?.(e)
+
     }
     const onDoubleClickCallBack = (
         e: React.MouseEvent<HTMLSpanElement, MouseEvent>
