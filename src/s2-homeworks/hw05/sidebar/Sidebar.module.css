@@ -16,6 +16,10 @@
 }
 
 .background {
+    color: black;
+    opacity: 0.6;
+    position: relative;
+    z-index: 5;
 }
 
 .nav {
@@ -33,6 +37,7 @@
     font-size: 22px;
     line-height: 27px;
     color: #000000;
+    text-decoration: none;
 }
 
 .nav a:hover {
