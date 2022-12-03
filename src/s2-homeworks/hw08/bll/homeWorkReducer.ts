@@ -9,8 +9,8 @@ export const homeWorkReducer = (state: Array<UserType>, action: ActionType): any
         case 'sort': { // by name
             let copyState=[...state]
             action.payload === 'up'
-                ? copyState = [...state].sort((a, b)=>(a.age>(b.age)?1:-1))
-                : copyState = [...state].sort((a, b)=>(a.age>(b.age)?-1:1))
+                ? copyState = [...state].sort((a, b)=>(a.age>(b.age)?-1:1))
+                : copyState = [...state].sort((a, b)=>(a.age>(b.age)?1:-1))
             return copyState
 
         }
