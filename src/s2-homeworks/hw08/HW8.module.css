@@ -1,23 +1,46 @@
 .item {
+    height: 36px;
+    margin:0px;
 }
 
 .item:last-of-type {
+
 }
 
 .users {
+
 }
 
 .buttonsContainer {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 105px;
+    margin-bottom: 18px;
 }
 
 .container {
+    width: 606px;
+    position: relative;
 }
 
 .thead {
+    background: #E5E5E5;
+    font-weight: 600;
+    margin:0px;
 }
 
 .nameCol {
+    width: 303px;
+    height: 36px;
+    padding-left: 17px;
+    margin:0px;
 }
 
 .ageCol {
+    width: 303px;
+    height: 36px;
+    padding-left: 17px;
+    margin:0px;
 }
