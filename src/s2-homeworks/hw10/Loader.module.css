@@ -1,3 +1,6 @@
 .loader {
     /*свг и/или анимация*/
+    background: url('./22.gif');
+    width: 128px;
+    height: 43px;
 }
