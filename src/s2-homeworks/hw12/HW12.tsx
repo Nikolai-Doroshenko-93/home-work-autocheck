@@ -21,7 +21,7 @@ const themes = [
 
 const HW12 = () => {
     // взять ид темы из редакса
-    const themeId = useSelector<AppStoreType, number>(state => state.theme)
+    const themeId = useSelector<any>(state => state.theme.themeId)
     const dispatch = useDispatch()
 
     const change = (id: number) => { // дописать функцию
@@ -34,7 +34,7 @@ const HW12 = () => {
 
     return (
         <div id={'hw12'}>
-            <div id={'hw12-text'} className={s2.hwTitle}>
+            <div id={'hw12-text'} className={s2.hwTitle} onClick={()=>console.log(themeId)}>
                 Homework #12
             </div>
 
@@ -43,6 +43,7 @@ const HW12 = () => {
                     id={'hw12-select-theme'}
                     className={s.select}
                     // сделать переключение тем
+
                     options={themes}
                     onChangeOption={change}
                 />

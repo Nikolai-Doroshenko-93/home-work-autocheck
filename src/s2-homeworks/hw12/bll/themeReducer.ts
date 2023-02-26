@@ -12,6 +12,7 @@ export const themeReducer = (state = initState, action: ChangeThemeIdType): Init
                 ...state,
                 themeId: action.id
             }
+
         default:
             return state
     }
