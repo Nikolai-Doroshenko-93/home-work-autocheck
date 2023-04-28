@@ -21,11 +21,11 @@ const themes = [
 
 const HW12 = () => {
     // взять ид темы из редакса
-    const themeId = useSelector<any>(state => state.theme.themeId)
+    const themeId = useSelector<AppStoreType>(state => state.theme.themeId)
     const dispatch = useDispatch()
 
     const change = (id: number) => { // дописать функцию
-        dispatch(changeThemeId(id+''))
+        dispatch(changeThemeId(id))
     }
 
     useEffect(() => {
@@ -43,7 +43,7 @@ const HW12 = () => {
                     id={'hw12-select-theme'}
                     className={s.select}
                     // сделать переключение тем
-
+                    value={themeId as number}
                     options={themes}
                     onChangeOption={change}
                 />
