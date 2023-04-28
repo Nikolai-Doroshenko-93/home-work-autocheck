@@ -39,7 +39,8 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setInfo('')
+                setInfo(res.data.info)
+                setText(res.data.errorText)
                 console.log(res)
                 setDisabled(false)
                 // дописать
@@ -51,23 +52,24 @@ const HW13 = () => {
                 if(e.response.status == 500) {
                     setCode('Код 500!')
                     setImage(error500)
-                    setInfo('')
-                    setText(e.response.data.info)
+                    setText(e.response.data.errorText)
+                    setInfo(e.response.data.info)
                     setDisabled(false)
+
                 }
                 if(e.response.status == 400) {
                     setCode('Код 400!')
                     setImage(error400)
-                    setInfo('')
-                    setText(e.response.data.info)
+                    setText(e.response.data.errorText)
+                    setInfo(e.response.data.info)
                     setDisabled(false)
                 }
                 if(e.response.status == 0) {
                     setCode('NAME_NOT_RESOLVED')
                     setImage(errorUnknown)
-                    setInfo('')
-                    setText(e.response.data.info)
+                    setInfo('Error')
                     setDisabled(false)
+                   
                 }
             })
     }
