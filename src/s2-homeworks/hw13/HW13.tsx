@@ -69,7 +69,7 @@ const HW13 = () => {
                     setImage(errorUnknown)
                     setInfo('Error')
                     setDisabled(false)
-                   
+
                 }
             })
     }
